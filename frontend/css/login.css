@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f4f6f9;
+
+}
+
+.navbar{
+
+    padding:15px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:1.6rem;
+
+}
+
+.nav-link{
+
+    margin-left:10px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#ffc107 !important;
+
+}
+
+.login-section{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:60px 0;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.card-body{
+
+    padding:40px;
+
+}
+
+.form-control{
+
+    height:50px;
+
+    border-radius:10px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+    border-color:#ffc107;
+
+}
+
+.btn{
+
+    height:50px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+#message{
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+footer{
+
+    margin-top:40px;
+
+}
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    color:#ffc107;
+
+}
+
+@media(max-width:768px){
+
+    .card-body{
+
+        padding:25px;
+
+    }
+
+    .login-section{
+
+        padding:30px 15px;
+
+    }
+
+}

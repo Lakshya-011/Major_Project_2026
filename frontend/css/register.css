@@ -1,0 +1,89 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:#f4f6f9;
+
+}
+
+.navbar{
+
+    padding:15px 0;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+}
+
+.card-body{
+
+    padding:40px;
+
+}
+
+h2{
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.form-control{
+
+    height:50px;
+
+    border-radius:10px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+    border-color:#ffc107;
+
+}
+
+.btn-warning{
+
+    height:50px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    background:#e6ac00;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}

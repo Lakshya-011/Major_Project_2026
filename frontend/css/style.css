@@ -1,0 +1,549 @@
+/* ==========================
+   Google Reset
+========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:#f8f9fa;
+
+    color:#333;
+
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+
+    padding:16px 0;
+
+    transition:.3s;
+
+}
+
+.navbar-brand{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.navbar .nav-link{
+
+    color:#fff !important;
+
+    margin-left:15px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.navbar .nav-link:hover{
+
+    color:#ffc107 !important;
+
+}
+
+.navbar .btn{
+
+    border-radius:30px;
+
+    padding:10px 22px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero{
+
+    min-height:92vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+.hero h1{
+
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    color:#d1d5db;
+
+    max-width:520px;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.12);
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.hero .btn{
+
+    border-radius:35px;
+
+    padding:14px 32px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero .btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:520px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+    transition:.5s;
+
+}
+
+.hero-image:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================
+   Feature Section
+========================== */
+
+.feature-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-card i{
+
+    font-size:48px;
+
+    color:#ffc107;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h4{
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.feature-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   Common Buttons
+========================== */
+
+.btn-warning{
+
+    background:#ffc107;
+
+    border:none;
+
+}
+
+.btn-warning:hover{
+
+    background:#ffb300;
+
+}
+
+.btn-outline-light:hover{
+
+    color:#111;
+
+}
+
+/* ==========================
+   Section Heading
+========================== */
+
+section h2{
+
+    font-weight:700;
+
+}
+
+section p{
+
+    line-height:1.8;
+
+}
+/* ==========================
+   How It Works
+========================== */
+
+.how-it-works{
+
+    background:#f8f9fa;
+
+}
+
+.step-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    position:relative;
+
+    height:100%;
+
+}
+
+.step-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.step-number{
+
+    position:absolute;
+
+    top:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:#ffc107;
+
+    color:#111;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================
+   Statistics
+========================== */
+
+.stats-section{
+
+    background:linear-gradient(135deg,#111827,#1f2937);
+
+    color:white;
+
+}
+
+.stats-section h1{
+
+    font-weight:700;
+
+}
+
+.stats-section h5{
+
+    margin-top:10px;
+
+    color:#ddd;
+
+}
+
+/* ==========================
+   Testimonials
+========================== */
+
+.testimonial-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.testimonial-card p{
+
+    color:#555;
+
+    margin:20px 0;
+
+}
+
+.testimonial-card h5{
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta-section{
+
+    padding:90px 0;
+
+    background:linear-gradient(135deg,#ffc107,#ff9800);
+
+    color:#111;
+
+}
+
+.cta-section .btn{
+
+    margin-top:20px;
+
+    border-radius:35px;
+
+    padding:14px 35px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    background:#111827;
+
+}
+
+footer h3{
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#d1d5db;
+
+}
+
+footer hr{
+
+    border-color:#444;
+
+}
+
+/* ==========================
+   Animations
+========================== */
+
+.feature-card,
+.step-card,
+.testimonial-card,
+.hero-image{
+
+    transition:all .35s ease;
+
+}
+
+.feature-card:hover,
+.step-card:hover,
+.testimonial-card:hover{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:991px){
+
+    .hero{
+
+        padding:80px 0;
+
+        text-align:center;
+
+    }
+
+    .hero p{
+
+        margin:auto;
+
+    }
+
+    .hero-image{
+
+        margin-top:50px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero .btn{
+
+        width:100%;
+
+        margin-bottom:15px;
+
+    }
+
+    .hero-image{
+
+        max-width:90%;
+
+    }
+
+    .feature-card,
+    .step-card,
+    .testimonial-card{
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding:70px 0;
+
+    }
+
+    .display-4{
+
+        font-size:2rem;
+
+    }
+
+    .stats-section h1{
+
+        font-size:2.2rem;
+
+    }
+
+}

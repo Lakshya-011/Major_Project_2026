@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fa;
+
+}
+
+.navbar{
+
+    padding:15px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    margin-left:15px;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.card-body{
+
+    padding:40px;
+
+}
+
+.form-control,
+.form-select{
+
+    height:50px;
+
+    border-radius:10px;
+
+}
+
+textarea.form-control{
+
+    height:auto;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#198754;
+
+    box-shadow:none;
+
+}
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+#message{
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+footer{
+
+    margin-top:50px;
+
+}
+
+@media(max-width:768px){
+
+    .card-body{
+
+        padding:25px;
+
+    }
+
+}

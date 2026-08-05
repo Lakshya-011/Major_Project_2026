@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Dashboard | Pet Adoption
+
+    </title>
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a
+                href="index.html"
+                class="navbar-brand fw-bold">
+
+                <i class="fa-solid fa-paw"></i>
+
+                Pet Adoption
+
+            </a>
+
+            <button
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span
+                    class="navbar-toggler-icon">
+
+                </span>
+
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
+
+                <ul
+                    class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            href="index.html"
+                            class="nav-link">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            href="pets.html"
+                            class="nav-link">
+
+                            Pets
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <button
+                            id="logoutBtn"
+                            class="btn btn-warning ms-3">
+
+                            Logout
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= Dashboard ================= -->
+
+    <section
+        class="dashboard-section">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h1
+                    class="fw-bold">
+
+                    Welcome,
+
+                    <span id="userName">
+
+                        User
+
+                    </span>
+
+                    👋
+
+                </h1>
+
+                <p
+                    class="text-muted">
+
+                    Manage your pets and adoption requests.
+
+                </p>
+
+            </div>
+
+            <div
+                class="row g-4">
+
+                <div
+                    class="col-lg-4">
+
+                    <div
+                        class="card dashboard-card shadow">
+
+                        <div
+                            class="card-body text-center">
+
+                            <i
+                                class="fa-solid fa-paw fa-3x text-warning mb-3">
+
+                            </i>
+
+                            <h4>
+
+                                My Pets
+
+                            </h4>
+
+                            <p>
+
+                                View all pets you have added.
+
+                            </p>
+
+                            <a
+                                href="pets.html"
+                                class="btn btn-warning">
+
+                                View Pets
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="col-lg-4">
+
+                    <div
+                        class="card dashboard-card shadow">
+
+                        <div
+                            class="card-body text-center">
+
+                            <i
+                                class="fa-solid fa-plus fa-3x text-success mb-3">
+
+                            </i>
+
+                            <h4>
+
+                                Add Pet
+
+                            </h4>
+
+                            <p>
+
+                                Create a new adoption listing.
+
+                            </p>
+
+                            <a
+                                href="create-pet.html"
+                                class="btn btn-success">
+
+                                Create Pet
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                                <div
+                    class="col-lg-4">
+
+                    <div
+                        class="card dashboard-card shadow">
+
+                        <div
+                            class="card-body text-center">
+
+                            <i
+                                class="fa-solid fa-handshake fa-3x text-primary mb-3">
+
+                            </i>
+
+                            <h4>
+
+                                My Requests
+
+                            </h4>
+
+                            <p>
+
+                                Track your adoption requests.
+
+                            </p>
+
+                            <a
+                                href="my-requests.html"
+                                class="btn btn-primary">
+
+                                View Requests
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="row mt-5 g-4">
+
+                <div
+                    class="col-lg-6">
+
+                    <div
+                        class="card dashboard-card shadow">
+
+                        <div
+                            class="card-body text-center">
+
+                            <i
+                                class="fa-solid fa-inbox fa-3x text-danger mb-3">
+
+                            </i>
+
+                            <h4>
+
+                                Received Requests
+
+                            </h4>
+
+                            <p>
+
+                                See requests received for your pets.
+
+                            </p>
+
+                            <a
+                                href="received-requests.html"
+                                class="btn btn-danger">
+
+                                View Received
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="col-lg-6">
+
+                    <div
+                        class="card dashboard-card shadow">
+
+                        <div
+                            class="card-body text-center">
+
+                            <i
+                                class="fa-solid fa-user fa-3x text-info mb-3">
+
+                            </i>
+
+                            <h4>
+
+                                Profile
+
+                            </h4>
+
+                            <p>
+
+                                Logged in as
+
+                            </p>
+
+                            <h5
+                                id="profileEmail">
+
+                                user@email.com
+
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+        class="bg-dark text-white text-center py-4 mt-5">
+
+        <div class="container">
+
+            <h5>
+
+                <i class="fa-solid fa-paw"></i>
+
+                Pet Adoption
+
+            </h5>
+
+            <p>
+
+                Giving every pet a loving home.
+
+            </p>
+
+            <hr>
+
+            <p class="mb-0">
+
+                © 2026 Pet Adoption. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Config -->
+
+    <script src="./js/config.js"></script>
+
+    <!-- Dashboard JS -->
+
+    <script src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
