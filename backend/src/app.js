@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 
@@ -6,6 +7,7 @@ const petRoutes = require("./routes/petRoutes");
 const adoptionRoutes = require("./routes/adoptionRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
+const rescueRoutes = require("./routes/rescueRoutes");
 
 const errorMiddleware = require("./middleware/errorMiddleware");
 
@@ -28,7 +30,7 @@ app.use("/uploads", express.static("uploads"));
 // =========================
 
 app.get("/", (req, res) => {
-    res.send("Pet Adoption API is Running...");
+    res.send("PawShield API is Running...");
 });
 
 // =========================
@@ -44,6 +46,9 @@ app.use("/api/adoptions", adoptionRoutes);
 app.use("/api/admin", adminRoutes);
 
 app.use("/api/dashboard", dashboardRoutes);
+
+// Emergency Animal Rescue Routes
+app.use("/api/rescues", rescueRoutes);
 
 // =========================
 // 404 Route

@@ -1,3 +1,4 @@
+
 // ==========================================
 // Route Protection
 // ==========================================
@@ -34,7 +35,7 @@ loadPets();
 
 searchBtn.addEventListener("click", () => {
 
-    loadPets(searchInput.value);
+    loadPets(searchInput.value.trim());
 
 });
 
@@ -63,7 +64,7 @@ async function loadPets(search = "") {
 
         if (search) {
 
-            url += `?search=${search}`;
+            url += `?search=${encodeURIComponent(search)}`;
 
         }
 
@@ -72,6 +73,22 @@ async function loadPets(search = "") {
         const data = await response.json();
 
         petContainer.innerHTML = "";
+
+        if (!response.ok || !data.success) {
+
+            petContainer.innerHTML = `
+
+                <h3 class="text-danger text-center">
+
+                    Failed to Load Pets
+
+                </h3>
+
+            `;
+
+            return;
+
+        }
 
         if (data.count === 0) {
 
@@ -91,6 +108,12 @@ async function loadPets(search = "") {
 
         data.pets.forEach((pet) => {
 
+            // Check Pet Ownership
+
+            const isOwner =
+                pet.owner &&
+                String(pet.owner._id) === String(user.id);
+
             petContainer.innerHTML += `
 
             <div class="col-lg-4 col-md-6 mb-4">
@@ -98,8 +121,9 @@ async function loadPets(search = "") {
                 <div class="card pet-card shadow">
 
                     <img
-                        src="${pet.image.url}"
-                        class="card-img-top">
+                        src="${pet.image?.url || ""}"
+                        class="card-img-top"
+                        alt="${pet.petName}">
 
                     <div class="card-body">
 
@@ -148,6 +172,20 @@ async function loadPets(search = "") {
                                 View Details
 
                             </a>
+
+                            ${isOwner ? `
+
+                                <a
+                                    href="edit-pet.html?id=${pet._id}"
+                                    class="btn btn-primary w-100 mt-2">
+
+                                    <i class="fa-solid fa-pen-to-square"></i>
+
+                                    Edit Pet
+
+                                </a>
+
+                            ` : ""}
 
                         </div>
 

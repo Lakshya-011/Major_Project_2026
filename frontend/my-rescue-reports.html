@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Rescue Reports | PawShield</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/my-rescue-reports.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-success" href="index.html">PawShield</a>
+
+        <div class="ms-auto d-flex gap-2">
+            <a href="dashboard.html" class="btn btn-outline-success">Dashboard</a>
+            <a href="report-rescue.html" class="btn btn-success">Report Animal</a>
+            <button id="logoutBtn" class="btn btn-outline-danger">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<main class="container reports-container">
+    <div class="page-heading">
+        <h1>My Rescue Reports</h1>
+        <p>Track the progress of the animals you have reported.</p>
+    </div>
+
+    <div id="message" class="alert d-none"></div>
+
+    <div id="reportsContainer" class="row g-4">
+        <div class="col-12 text-center">
+            <div class="spinner-border text-success"></div>
+            <p class="mt-2">Loading your reports...</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 PawShield. Every Life Matters.</p>
+</footer>
+
+<script src="./js/config.js"></script>
+<script src="./js/myRescueReports.js"></script>
+
+</body>
+</html>

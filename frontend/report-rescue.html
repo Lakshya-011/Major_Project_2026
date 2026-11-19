@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Injured Animal | PawShield</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/report-rescue.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand fw-bold">
+                <i class="fa-solid fa-paw"></i> PawShield
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pets.html" class="nav-link">Adopt Pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="logoutBtn" class="btn btn-warning ms-3">Logout</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="rescue-section py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">
+                    <i class="fa-solid fa-truck-medical text-danger"></i>
+                    Report an Injured Animal
+                </h1>
+
+                <p class="text-muted">
+                    Your report can help save an animal's life.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card shadow">
+                        <div class="card-body p-4 p-md-5">
+
+                            <form id="rescueForm" enctype="multipart/form-data">
+
+                                <div class="mb-3">
+                                    <label class="form-label">Animal Type</label>
+                                    <select id="animalType" class="form-select" required>
+                                        <option value="">Select animal</option>
+                                        <option value="Dog">Dog</option>
+                                        <option value="Cat">Cat</option>
+                                        <option value="Cow">Cow</option>
+                                        <option value="Bird">Bird</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Animal Condition</label>
+                                    <select id="condition" class="form-select" required>
+                                        <option value="">Select condition</option>
+                                        <option value="Injured">Injured</option>
+                                        <option value="Accident">Road Accident</option>
+                                        <option value="Critical">Critical Condition</option>
+                                        <option value="Abandoned">Abandoned</option>
+                                        <option value="Sick">Sick</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Urgency Level</label>
+                                    <select id="urgency" class="form-select" required>
+                                        <option value="Low">Low</option>
+                                        <option value="Medium" selected>Medium</option>
+                                        <option value="High">High</option>
+                                        <option value="Critical">Critical</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea id="description" class="form-control" rows="4"
+                                        placeholder="Describe the animal's condition and situation..."
+                                        required></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Animal Location / Address</label>
+                                    <input type="text" id="address" class="form-control"
+                                        placeholder="Enter complete location" required>
+                                </div>
+
+                                <input type="hidden" id="latitude">
+                                <input type="hidden" id="longitude">
+
+                                <button type="button" id="locationBtn" class="btn btn-outline-primary mb-3">
+                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                    Use My Current Location
+                                </button>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" id="contactName" class="form-control" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Contact Number</label>
+                                    <input type="tel" id="contactPhone" class="form-control"
+                                        pattern="[0-9+\-\s()]{7,20}" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label">Upload Animal Photograph</label>
+                                    <input type="file" id="image" class="form-control"
+                                        accept="image/jpeg,image/png,image/webp">
+                                    <small class="text-muted">JPEG, PNG or WebP image.</small>
+                                </div>
+
+                                <button type="submit" id="submitBtn" class="btn btn-danger w-100">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    Submit Rescue Report
+                                </button>
+
+                                <div id="message" class="text-center mt-3"></div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h5><i class="fa-solid fa-paw"></i> PawShield</h5>
+            <p class="mb-0">Every life deserves care and protection.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/reportRescue.js"></script>
+
+</body>
+</html>
